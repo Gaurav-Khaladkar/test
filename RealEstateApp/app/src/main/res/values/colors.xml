@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="primary_light">#BBDEFB</color>
+    
+    <!-- Secondary Colors -->
+    <color name="secondary">#FF9800</color>
+    <color name="secondary_dark">#F57C00</color>
+    <color name="secondary_light">#FFE0B2</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent">#4CAF50</color>
+    <color name="accent_dark">#388E3C</color>
+    <color name="accent_light">#C8E6C9</color>
+    
+    <!-- Neutral Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="background">#FAFAFA</color>
+    <color name="surface">#FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+    <color name="text_disabled">#9E9E9E</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+    <color name="info">#2196F3</color>
+    
+    <!-- Property Status Colors -->
+    <color name="status_available">#4CAF50</color>
+    <color name="status_sold">#F44336</color>
+    <color name="status_rented">#FF9800</color>
+    <color name="status_pending">#2196F3</color>
+    <color name="status_off_market">#9E9E9E</color>
+    
+    <!-- Price Type Colors -->
+    <color name="price_sale">#4CAF50</color>
+    <color name="price_rent">#2196F3</color>
+    <color name="price_lease">#FF9800</color>
+    
+    <!-- Divider and Border Colors -->
+    <color name="divider">#E0E0E0</color>
+    <color name="border">#BDBDBD</color>
+    <color name="border_light">#EEEEEE</color>
+    
+    <!-- Shadow Colors -->
+    <color name="shadow_light">#1A000000</color>
+    <color name="shadow_medium">#33000000</color>
+    <color name="shadow_dark">#4D000000</color>
+    
+    <!-- Overlay Colors -->
+    <color name="overlay_light">#1A000000</color>
+    <color name="overlay_medium">#33000000</color>
+    <color name="overlay_dark">#66000000</color>
+    
+    <!-- Gradient Colors -->
+    <color name="gradient_start">#1976D2</color>
+    <color name="gradient_end">#1565C0</color>
+    
+    <!-- Map Colors -->
+    <color name="map_primary">#1976D2</color>
+    <color name="map_secondary">#FF9800</color>
+    <color name="map_background">#F5F5F5</color>
+    
+    <!-- Rating Colors -->
+    <color name="rating_filled">#FFC107</color>
+    <color name="rating_empty">#E0E0E0</color>
+    
+    <!-- Favorite Colors -->
+    <color name="favorite_active">#F44336</color>
+    <color name="favorite_inactive">#BDBDBD</color>
+    
+</resources>

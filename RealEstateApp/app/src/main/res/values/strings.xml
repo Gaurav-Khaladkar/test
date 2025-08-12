@@ -1,0 +1,165 @@
+<resources>
+    <string name="app_name">Real Estate</string>
+    
+    <!-- Navigation -->
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_favorites">Favorites</string>
+    <string name="title_profile">Profile</string>
+    
+    <!-- Common -->
+    <string name="loading">Loading…</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="add">Add</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="clear">Clear</string>
+    <string name="apply">Apply</string>
+    <string name="done">Done</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="back">Back</string>
+    <string name="close">Close</string>
+    
+    <!-- Property Details -->
+    <string name="property_details">Property Details</string>
+    <string name="price">Price</string>
+    <string name="bedrooms">Bedrooms</string>
+    <string name="bathrooms">Bathrooms</string>
+    <string name="area">Area</string>
+    <string name="address">Address</string>
+    <string name="description">Description</string>
+    <string name="amenities">Amenities</string>
+    <string name="features">Features</string>
+    <string name="contact_owner">Contact Owner</string>
+    <string name="view_on_map">View on Map</string>
+    <string name="share_property">Share Property</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="remove_from_favorites">Remove from Favorites</string>
+    <string name="property_type">Property Type</string>
+    <string name="year_built">Year Built</string>
+    <string name="parking_spaces">Parking Spaces</string>
+    <string name="furnished">Furnished</string>
+    <string name="pet_friendly">Pet Friendly</string>
+    <string name="available_from">Available From</string>
+    
+    <!-- Property Types -->
+    <string name="apartment">Apartment</string>
+    <string name="house">House</string>
+    <string name="condo">Condo</string>
+    <string name="townhouse">Townhouse</string>
+    <string name="villa">Villa</string>
+    <string name="penthouse">Penthouse</string>
+    <string name="studio">Studio</string>
+    <string name="loft">Loft</string>
+    <string name="duplex">Duplex</string>
+    <string name="triplex">Triplex</string>
+    
+    <!-- Price Types -->
+    <string name="sale">Sale</string>
+    <string name="rent">Rent</string>
+    <string name="lease">Lease</string>
+    
+    <!-- Search & Filter -->
+    <string name="search_properties">Search Properties</string>
+    <string name="min_price">Min Price</string>
+    <string name="max_price">Max Price</string>
+    <string name="min_bedrooms">Min Bedrooms</string>
+    <string name="max_bedrooms">Max Bedrooms</string>
+    <string name="min_bathrooms">Min Bathrooms</string>
+    <string name="max_bathrooms">Max Bathrooms</string>
+    <string name="min_area">Min Area</string>
+    <string name="max_area">Max Area</string>
+    <string name="location">Location</string>
+    <string name="radius">Radius</string>
+    <string name="sort_by">Sort By</string>
+    <string name="price_low_to_high">Price: Low to High</string>
+    <string name="price_high_to_low">Price: High to Low</string>
+    <string name="newest_first">Newest First</string>
+    <string name="oldest_first">Oldest First</string>
+    <string name="most_popular">Most Popular</string>
+    
+    <!-- Authentication -->
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone">Phone</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    
+    <!-- Profile -->
+    <string name="profile">Profile</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="settings">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="privacy">Privacy</string>
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    
+    <!-- Add Property -->
+    <string name="add_property">Add Property</string>
+    <string name="property_title">Property Title</string>
+    <string name="property_description">Property Description</string>
+    <string name="upload_photos">Upload Photos</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="property_information">Property Information</string>
+    <string name="location_information">Location Information</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="publish_property">Publish Property</string>
+    <string name="save_draft">Save Draft</string>
+    
+    <!-- Messages -->
+    <string name="property_added_successfully">Property added successfully</string>
+    <string name="property_updated_successfully">Property updated successfully</string>
+    <string name="property_deleted_successfully">Property deleted successfully</string>
+    <string name="added_to_favorites">Added to favorites</string>
+    <string name="removed_from_favorites">Removed from favorites</string>
+    <string name="login_successful">Login successful</string>
+    <string name="registration_successful">Registration successful</string>
+    <string name="profile_updated">Profile updated</string>
+    <string name="password_reset_sent">Password reset email sent</string>
+    
+    <!-- Errors -->
+    <string name="error_invalid_email">Invalid email address</string>
+    <string name="error_invalid_password">Password must be at least 6 characters</string>
+    <string name="error_passwords_dont_match">Passwords don\'t match</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_network">Network error. Please check your connection</string>
+    <string name="error_unknown">Unknown error occurred</string>
+    <string name="error_no_properties_found">No properties found</string>
+    <string name="error_loading_properties">Error loading properties</string>
+    
+    <!-- Units -->
+    <string name="sqft">sq ft</string>
+    <string name="sqm">sq m</string>
+    <string name="acres">acres</string>
+    <string name="hectares">hectares</string>
+    <string name="km">km</string>
+    <string name="miles">miles</string>
+    
+    <!-- Status -->
+    <string name="available">Available</string>
+    <string name="sold">Sold</string>
+    <string name="rented">Rented</string>
+    <string name="under_contract">Under Contract</string>
+    <string name="pending">Pending</string>
+    <string name="off_market">Off Market</string>
+    
+</resources>

@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            app:popupTheme="@style/ThemeOverlay.Material3.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Loading State -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:visibility="gone" />
+
+            <!-- Content Group -->
+            <LinearLayout
+                android:id="@+id/contentGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Property Images -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPropertyImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:clipToPadding="false"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    tools:listitem="@layout/item_property_image" />
+
+                <!-- Property Information Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Property Title and Price -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:id="@+id/tvPropertyTitle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/sample_property_title"
+                                android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                                android:textColor="@color/text_primary"
+                                tools:text="Beautiful 3 Bedroom Apartment in Downtown" />
+
+                            <TextView
+                                android:id="@+id/tvPropertyPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/sample_price"
+                                android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                                android:textColor="@color/primary"
+                                android:textStyle="bold"
+                                tools:text="$2,500/month" />
+
+                        </LinearLayout>
+
+                        <!-- Property Status -->
+                        <TextView
+                            android:id="@+id/tvStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/available"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                            android:textColor="@color/white"
+                            android:background="@drawable/bg_status_available"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingBottom="4dp"
+                            android:layout_marginBottom="16dp"
+                            tools:text="Available" />
+
+                        <!-- Property Details Grid -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginBottom="16dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/property_details"
+                                android:textAppearance="@style/TextAppearance.RealEstateApp.Body1"
+                                android:textColor="@color/text_primary"
+                                android:textStyle="bold"
+                                android:layout_marginBottom="12dp" />
+
+                            <GridLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:columnCount="2"
+                                android:rowCount="3">
+
+                                <!-- Bedrooms -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_columnWeight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:id="@+id/tvBedrooms"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="3"
+                                        android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                                        android:textColor="@color/primary"
+                                        tools:text="3" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/bedrooms"
+                                        android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                                        android:textColor="@color/text_secondary" />
+
+                                </LinearLayout>
+
+                                <!-- Bathrooms -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_columnWeight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:id="@+id/tvBathrooms"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="2"
+                                        android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                                        android:textColor="@color/primary"
+                                        tools:text="2" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/bathrooms"
+                                        android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                                        android:textColor="@color/text_secondary" />
+
+                                </LinearLayout>
+
+                                <!-- Area -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_columnWeight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:id="@+id/tvArea"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1,200 sqft"
+                                        android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                                        android:textColor="@color/primary"
+                                        tools:text="1,200 sqft" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/area"
+                                        android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                                        android:textColor="@color/text_secondary" />
+
+                                </LinearLayout>
+
+                                <!-- Property Type -->
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_columnWeight="1"
+                                    android:orientation="vertical"
+                                    android:gravity="center"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:id="@+id/tvPropertyType"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Apartment"
+                                        android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                                        android:textColor="@color/primary"
+                                        tools:text="Apartment" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/property_type"
+                                        android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                                        android:textColor="@color/text_secondary" />
+
+                                </LinearLayout>
+
+                            </GridLayout>
+
+                        </LinearLayout>
+
+                        <!-- Property Description -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/description"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Body1"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/tvPropertyDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sample_description"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Body2"
+                            android:textColor="@color/text_secondary"
+                            android:layout_marginBottom="16dp"
+                            tools:text="This beautiful apartment features modern amenities, spacious rooms, and a great location in the heart of the city." />
+
+                        <!-- Address -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/address"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Body1"
+                            android:textColor="@color/text_primary"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="8dp" />
+
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sample_address"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Body2"
+                            android:textColor="@color/text_secondary"
+                            android:drawableStart="@drawable/ic_location"
+                            android:drawablePadding="8dp"
+                            android:layout_marginBottom="16dp"
+                            tools:text="123 Main Street, New York, NY 10001" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Action Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCallOwner"
+                        style="@style/Widget.RealEstateApp.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/call"
+                        android:drawableStart="@drawable/ic_call"
+                        android:drawablePadding="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnEmailOwner"
+                        style="@style/Widget.RealEstateApp.Button"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/email"
+                        android:drawableStart="@drawable/ic_email"
+                        android:drawablePadding="8dp" />
+
+                </LinearLayout>
+
+                <!-- Additional Action Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="16dp"
+                    android:gravity="center">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnViewOnMap"
+                        style="@style/Widget.RealEstateApp.Button.Secondary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:text="@string/view_on_map"
+                        android:drawableStart="@drawable/ic_map"
+                        android:drawablePadding="8dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnShareProperty"
+                        style="@style/Widget.RealEstateApp.Button.Secondary"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/share"
+                        android:drawableStart="@drawable/ic_share"
+                        android:drawablePadding="8dp" />
+
+                </LinearLayout>
+
+                <!-- Favorite Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAddToFavorites"
+                    style="@style/Widget.RealEstateApp.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/add_to_favorites"
+                    android:drawableStart="@drawable/ic_favorite"
+                    android:drawablePadding="8dp" />
+
+                <!-- Amenities Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/amenities"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginBottom="12dp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvAmenities"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/item_amenity" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Features Section -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/features"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginBottom="12dp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvFeatures"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/item_feature" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Owner Information -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contact_owner"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginBottom="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvOwnerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sample_owner_name"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Body1"
+                            android:textColor="@color/text_primary"
+                            android:layout_marginBottom="8dp"
+                            tools:text="John Doe" />
+
+                        <TextView
+                            android:id="@+id/tvOwnerPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sample_owner_phone"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Body2"
+                            android:textColor="@color/text_secondary"
+                            android:drawableStart="@drawable/ic_phone"
+                            android:drawablePadding="8dp"
+                            android:layout_marginBottom="8dp"
+                            tools:text="+1 (555) 123-4567" />
+
+                        <TextView
+                            android:id="@+id/tvOwnerEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sample_owner_email"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Body2"
+                            android:textColor="@color/text_secondary"
+                            android:drawableStart="@drawable/ic_email"
+                            android:drawablePadding="8dp"
+                            tools:text="john.doe@example.com" />
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Property Stats -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvViews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1,234"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                            android:textColor="@color/primary"
+                            tools:text="1,234" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/views"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                            android:textColor="@color/text_secondary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tvFavorites"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="42"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                            android:textColor="@color/primary"
+                            tools:text="42" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/favorites"
+                            android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                            android:textColor="@color/text_secondary" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

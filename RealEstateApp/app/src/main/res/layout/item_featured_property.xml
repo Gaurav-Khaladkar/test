@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/border_light">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Property Image -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/ivPropertyImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/placeholder_property" />
+
+            <!-- Status Badge -->
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="12dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="@string/available"
+                android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_status_available"
+                tools:text="Available" />
+
+            <!-- Favorite Count -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_margin="12dp"
+                android:background="@drawable/bg_favorite_count"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_favorite"
+                    android:tint="@color/favorite_active" />
+
+                <TextView
+                    android:id="@+id/tvFavoriteCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="42"
+                    android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                    android:textColor="@color/white"
+                    tools:text="42" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <!-- Property Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Property Title -->
+            <TextView
+                android:id="@+id/tvPropertyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/sample_property_title"
+                android:textAppearance="@style/TextAppearance.RealEstateApp.Body1"
+                android:textColor="@color/text_primary"
+                tools:text="Beautiful 3 Bedroom Apartment in Downtown" />
+
+            <!-- Property Price -->
+            <TextView
+                android:id="@+id/tvPropertyPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/sample_price"
+                android:textAppearance="@style/TextAppearance.RealEstateApp.Headline2"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                tools:text="$2,500/month" />
+
+            <!-- Property Location -->
+            <TextView
+                android:id="@+id/tvPropertyLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:drawableStart="@drawable/ic_location"
+                android:drawablePadding="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/sample_location"
+                android:textAppearance="@style/TextAppearance.RealEstateApp.Body2"
+                android:textColor="@color/text_secondary"
+                tools:text="New York, NY" />
+
+            <!-- Property Features -->
+            <TextView
+                android:id="@+id/tvPropertyFeatures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sample_features"
+                android:textAppearance="@style/TextAppearance.RealEstateApp.Caption"
+                android:textColor="@color/text_secondary"
+                tools:text="3 bed • 2 bath • 1,200 sqft" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
